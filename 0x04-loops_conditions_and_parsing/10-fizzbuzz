@@ -8,7 +8,7 @@ while [ $num -le 100 ]; do
 	buzz=$((num % 5))
 
 	if [ $fizz -eq 0 ] && [ $buzz -eq 0 ]; then
-		echo "Fizzbuzz"
+		echo "FizzBuzz"
 	elif [ $fizz -eq 0 ]; then
 		echo "Fizz"
 	elif [ $buzz -eq 0 ]; then
