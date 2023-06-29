@@ -4,8 +4,8 @@
 num=1
 
 while [ $num -le 100 ]; do
-	fizz=$(($num % 3))
-	buzz=$(($num % 5))
+	fizz=$((num % 3))
+	buzz=$((num % 5))
 
 	if [ $fizz -eq 0 ] && [ $buzz -eq 0 ]; then
 		echo "Fizzbuzz"
