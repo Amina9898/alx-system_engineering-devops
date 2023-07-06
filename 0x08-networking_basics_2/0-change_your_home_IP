@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#This script configuers the local host and facebook ip addresses
+cp /etc/hosts hosts1
+echo "127.0.0.2	localhost" > hosts1
+echo "8.8.8.8	facebook.com" >> hosts1
+cp -f hosts1 /etc/hosts
