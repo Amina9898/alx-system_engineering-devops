@@ -1,3 +1,4 @@
+#comment here
 class nginx_redirect {
   package { 'nginx':
     ensure => 'installed',
