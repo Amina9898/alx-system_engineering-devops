@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Install Nginx
+sudo apt-get update
+sudo apt-get install -y nginx
+
+# Configure redirection
+REDIRECT_CONFIG="/etc/nginx/sites-available/redirect"
+echo "server {" | sudo tee $REDIRECT_CONFIG
+echo "    listen 80;" | sudo tee -a $REDIRECT_CONFIG
+echo "    server_name _;" | sudo tee -a $REDIRECT_CONFIG
+echo "    location /redirect_me {" | sudo tee -a $REDIRECT_CONFIG
+echo "        return 301 http://example.com/another_page;" | sudo tee -a $REDIRECT_CONFIG
+echo "    }" | sudo tee -a $REDIRECT_CONFIG
+echo "}" | sudo tee -a $REDIRECT_CONFIG
+
+sudo ln -s $REDIRECT_CONFIG /etc/nginx/sites-enabled/
+sudo rm -f /etc/nginx/sites-enabled/default
+
+sudo service nginx restart
+
