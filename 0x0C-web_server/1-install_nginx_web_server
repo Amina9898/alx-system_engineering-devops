@@ -5,7 +5,7 @@ sudo apt-get update
 
 sudo apt-get install -y nginx
 
-sudo mkdir /etc/nginx/html
+sudo mkdir -p /etc/nginx/html
 
 sudo touch /etc/nginx/html/index.html
 
