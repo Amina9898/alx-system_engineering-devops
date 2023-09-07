@@ -9,11 +9,11 @@
 sudo apt-get update
 sudo apt-get install -y nginx
 
-sudo mkdir -p /var/www/html
-sudo touch /var/www/html/index.html
+sudo mkdir -p /etc/nginx/html
+sudo touch /etc/nginx/html/index.html
 sudo echo "Hello World!" | sudo tee /var/www/html/index.html
 sudo sed -i "s/listen 80 default_server;/listen 80;/" /etc/nginx/sites-availible/default
-sudo sed -i "add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-a
+sudo sed -i "47i add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-a
 vailible/default
 
 sudo service nginx restart
