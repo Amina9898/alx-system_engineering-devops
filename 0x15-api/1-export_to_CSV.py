@@ -29,9 +29,9 @@ def export_to_csv(employee_id):
 
         for task in todo:
             if task['completed']:
-                status = "True"
+                status = True
             else:
-                status = "False"
+                status = False
             writer.writerow([employee_id, emp_name, status, task['title']])
 
 
