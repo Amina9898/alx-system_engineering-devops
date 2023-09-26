@@ -5,8 +5,8 @@ informaation from an API
 """
 
 
-import sys
 import requests
+import sys
 
 
 def fetch_employee_todo(employee_id):
