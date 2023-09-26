@@ -23,11 +23,11 @@ def fetch_employee_todo(employee_id):
     total = len(todo)
     completed = sum(1 for task in todo if task['completed'])
 
-    print(f"Employee {emp_name} is done with tasks ({completed}/{total}):")
+    print(f"Employee {emp_name} is done with tasks({completed}/{total}):")
 
     for task in todo:
         if task['completed']:
-            print("\t{}".format(task['title']))
+            print("\t {}".format(task['title']))
 
 
 if __name__ == "__main__":
