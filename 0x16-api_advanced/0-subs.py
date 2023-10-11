@@ -12,7 +12,7 @@ def number_of_subscribers(subreddit):
     number of subscribers for a given subreddit.
     If an invalid subreddit is given, the function should return 0
     """
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {
         "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
     }
